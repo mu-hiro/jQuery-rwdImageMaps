@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>イメージマップをレスポンシブに対応させてみよう！</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+</head>
+
+<body>
+
+    <img src="https://ktc-design.com/wp-content/uploads/2020/04/KTC鹿児島map.gif" alt="" usemap="#Kagoshima-Map" />
+    <map name="Kagoshima-Map">
+       <area alt="" coords="21,185,234,222" shape="rect" href="北薩摩エリアの温泉達/" />
+       <area alt="" coords="311,161,576,199" shape="rect" href="霧島・姶良エリアの温泉達/" />
+       <area alt="" coords="164,316,369,354" shape="rect" href="中薩摩エリアの温泉達/" />
+       <area alt="" coords="361,389,546,424" shape="rect" href="大隅エリアの温泉達/" />
+       <area alt="" coords="24,433,233,470" shape="rect" href="中薩摩エリアの温泉達/" />
+    </map>
+
+    <script>
+        $('img[usemap]').rwdImageMaps();
+    </script>
+</body>
+
+</html>
